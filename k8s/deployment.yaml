@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskmanagement
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskmanagement
+  template:
+    metadata:
+      labels:
+        app: taskmanagement
+    spec:
+      containers:
+      - name: taskmanagement
+        image: 415268158012.dkr.ecr.us-east-1.amazonaws.com/taskmanagement:latest
+        ports:
+        - containerPort: 8080

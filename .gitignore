@@ -41,4 +41,19 @@ logs/
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+
+# AWS credentials (just in case)
+*.pem
+*.key
+*.aws
+
+# Environment files
+.env
+.env.* 
